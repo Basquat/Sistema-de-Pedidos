@@ -17,12 +17,22 @@ public class clienteModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int clienteID;
 
+    @Column(nullable = false, length = 150)
     String clienteNome;
+
+    @Column(nullable = false, length = 20)
     int clienteCPF;
+
+    @Column(nullable = false, length = 30)
     int clienteCEP;
+
+    @Column(nullable = false, length = 60, unique = true)
     int clienteLogin;
+
+    @Column(nullable = false, length = 300)
     int clienteSenha;
 
+    @Column(nullable = false)
     String clienteBirth;
     LocalDate data = LocalDate.parse(clienteBirth, formato);
 }

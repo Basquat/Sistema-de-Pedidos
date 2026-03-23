@@ -17,12 +17,16 @@ public class cartaoModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int cartaoID;
 
+    @Column(nullable = false, length = 155)
     String NomeCartao;
 
+    @Column(nullable = false, length = 5)
     int cartaoCV;
+
+    @Column(nullable = false, length = 22)
     int cartaoCodigo;
 
+    @Column(nullable = false, length = 13)
     String cartaoVenc;
-
     LocalDate data = LocalDate.parse(cartaoVenc, formato);
 }

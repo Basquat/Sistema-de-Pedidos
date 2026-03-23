@@ -11,11 +11,22 @@ import java.util.List;
 @CrossOrigin(origins = "*")
 public class clienteController {
 
-    private clienteRepository CLIENTEREPOSITORY;
+    private clienteRepository Clienterepository;
+
+    @GetMapping
+    public List<clienteModel> getAllModels(){
+        return (List<clienteModel>) Clienterepository.findAll();
+    }
+
+    @DeleteMapping("/{clienteID}")
+    public void deleteCliente(@PathVariable int clienteID){
+        Clienterepository.deleteById(clienteID);
+    }
 
     @PostMapping("/Add")
     public String addCliente(@RequestBody clienteModel model){
-        CLIENTEREPOSITORY.saveAll(model);
+        Clienterepository.save(model);
         return "Cliente salvo !";
     }
 }
+
