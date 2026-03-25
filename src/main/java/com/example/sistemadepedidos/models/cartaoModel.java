@@ -30,3 +30,5 @@ public class cartaoModel {
     String cartaoVenc;
     LocalDate data = LocalDate.parse(cartaoVenc, formato);
 }
+
+

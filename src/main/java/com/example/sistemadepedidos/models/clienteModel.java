@@ -36,3 +36,4 @@ public class clienteModel {
     String clienteBirth;
     LocalDate data = LocalDate.parse(clienteBirth, formato);
 }
+
