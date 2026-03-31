@@ -7,6 +7,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * Serviço responsável pela lógica de negócio relacionada a clientes.
+ */
 @Service
 public class clienteService {
 
@@ -16,7 +19,18 @@ public class clienteService {
         this.repository = repository;
     }
 
-    public clienteModel criarConta( String clienteNome, int clienteCPF, int clienteCEP, int clienteLogin, int clienteSenha, String clienteBirth){
+    /**
+     * Cria e persiste uma nova conta de cliente.
+     *
+     * @param clienteNome  Nome completo do cliente.
+     * @param clienteCPF   CPF do cliente.
+     * @param clienteCEP   CEP do cliente.
+     * @param clienteLogin Login de acesso.
+     * @param clienteSenha Senha de acesso.
+     * @param clienteBirth Data de nascimento no formato {@code dd/MM/yyyy}.
+     * @return O {@link clienteModel} salvo com ID gerado.
+     */
+    public clienteModel criarConta(String clienteNome, int clienteCPF, int clienteCEP, int clienteLogin, int clienteSenha, String clienteBirth){
         clienteModel cliente = new clienteModel();
 
         cliente.setClienteNome(clienteNome);
@@ -29,6 +43,11 @@ public class clienteService {
         return repository.save(cliente);
     }
 
+    /**
+     * Retorna todos os clientes cadastrados no sistema.
+     *
+     * @return Lista de {@link clienteModel}.
+     */
     public List<clienteModel> listarCliente(){
         return repository.findAll();
     }
