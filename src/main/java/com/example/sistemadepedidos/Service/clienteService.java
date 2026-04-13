@@ -7,9 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * Serviço responsável pela lógica de negócio relacionada a clientes.
- */
+
 @Service
 public class clienteService {
 

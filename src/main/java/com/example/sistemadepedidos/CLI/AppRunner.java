@@ -6,7 +6,6 @@ import org.springframework.stereotype.Component;
 import com.example.sistemadepedidos.Service.clienteService;
 import com.example.sistemadepedidos.Service.cartaoService;
 import com.example.sistemadepedidos.Service.pedidoService;
-import org.springframework.stereotype.Service;
 import com.example.sistemadepedidos.models.clienteModel;
 import com.example.sistemadepedidos.models.cartaoModel;
 import com.example.sistemadepedidos.models.pedidoModel;
@@ -14,18 +13,10 @@ import com.example.sistemadepedidos.Repository.cartaoRepository;
 import com.example.sistemadepedidos.Repository.pedidoRepository;
 import com.example.sistemadepedidos.Repository.clienteRepository;
 
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Scanner;
 
 
-/**
- * Ponto de entrada da interface de linha de comando (CLI).
- *
- * <p>Implementa {@link CommandLineRunner} para ser executado automaticamente
- * após o boot do Spring Boot. Apresenta um menu interativo ao usuário para
- * gerenciar clientes, cartões e pedidos.</p>
- */
 @Component
 public class AppRunner implements CommandLineRunner {
 

@@ -4,8 +4,6 @@ import org.springframework.stereotype.Service;
 import com.example.sistemadepedidos.Repository.cartaoRepository;
 import com.example.sistemadepedidos.models.cartaoModel;
 
-import java.util.List;
-
 
 @Service
 public class cartaoService {

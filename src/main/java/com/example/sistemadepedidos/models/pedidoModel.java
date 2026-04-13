@@ -1,12 +1,11 @@
 package com.example.sistemadepedidos.models;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Value;
 
 
 
-@Data
+
+
 @Entity
 @Table(name = "pedidoModel")
 public class pedidoModel {
@@ -24,5 +23,37 @@ public class pedidoModel {
     @Column(nullable = true)
     int pedidoFrete;
 
+
+    public int getPedidoID() {
+        return pedidoID;
+    }
+
+    public void setPedidoID(int pedidoID) {
+        this.pedidoID = pedidoID;
+    }
+
+    public String getPedido() {
+        return pedido;
+    }
+
+    public void setPedido(String pedido) {
+        this.pedido = pedido;
+    }
+
+    public int getPedidoValor() {
+        return pedidoValor;
+    }
+
+    public void setPedidoValor(int pedidoValor) {
+        this.pedidoValor = pedidoValor;
+    }
+
+    public int getPedidoFrete() {
+        return pedidoFrete;
+    }
+
+    public void setPedidoFrete(int pedidoFrete) {
+        this.pedidoFrete = pedidoFrete;
+    }
 }
 
